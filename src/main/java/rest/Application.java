@@ -27,10 +27,11 @@ public class Application extends Controller {
                 """
                         O presente vai chegar com um pouquinho de atraso, mas vai chegar.
                         E retribuindo meu presente do amigo secreto do ano passado
-                        vou deixar a prévia do presente aqui uma prévia do presente...hahahaha
+                        vou deixar a prévia do presente aqui...hahahaha
                         """,
                 "Te Amo Pai! Fernando",
-                "2025"
+                "2025",
+                "/minha-foto.jpeg"
         );
 
         return Templates.christmasCard(card);
@@ -46,10 +47,11 @@ public class Application extends Controller {
                 """
                         O presente vai chegar com um pouquinho de atraso, mas vai chegar.
                         E retribuindo meu presente do amigo secreto do ano passado
-                        vou deixar a prévia do presente aqui uma prévia do presente...hahahaha
+                        vou deixar a prévia do presente aqui...hahahaha
                         """,
                 "Te Amo Pai! Fernando",
-                "2025"
+                "2025",
+                "/minha-foto.jpeg"
         );
 
         return Templates.christmasCard(card);
@@ -61,14 +63,16 @@ public class Application extends Controller {
     public TemplateInstance christmasPdfCard(@QueryParam("recipient") String recipient,
                                              @QueryParam("message") String message,
                                              @QueryParam("sender") String sender,
-                                             @QueryParam("year") String year) {
+                                             @QueryParam("year") String year,
+                                             @QueryParam("photoUrl") String photoUrl) {
         // Cria o objeto com os dados vindos da URL (do formulário/botão)
         // Se algum vier nulo, usamos um valor padrão para não quebrar
         CardData card = new CardData(
                 recipient != null ? recipient : "Alguém Especial",
                 message != null ? message : "Feliz Natal!",
                 sender != null ? sender : "Eu",
-                year != null ? year : "2025"
+                year != null ? year : "2025",
+                photoUrl != null && !photoUrl.isBlank() ? photoUrl : "/minha-foto.jpeg"
         );
         return Templates.christmasCard(card);
     }

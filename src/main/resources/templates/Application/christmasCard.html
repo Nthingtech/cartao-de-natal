@@ -113,6 +113,16 @@
             width: 60px;
         }
 
+        .photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            margin: 10px auto;
+            display: block;
+            background-color: #fff;
+        }
+
         .download-container {
             margin-top: 20px;
             padding-bottom: 20px;
@@ -171,13 +181,14 @@
     <!-- Main content -->
     <div class="content">
         <h1><img src="https://img.icons8.com/fluency/48/sparkling.png" class="sparkle" alt="" /> Feliz Natal! <img src="https://img.icons8.com/fluency/48/sparkling.png" class="sparkle" alt="" /></h1>
+        <img src="{card.photoUrl}" class="photo" alt="Foto" />
         <p>{card.recipient}</p>
         <p>{card.message}</p>
         <p>— {card.sender}, {card.year}</p>
     </div>
 </div>
 <div class="download-container">
-    <a href="/christmasPdfCard?recipient={card.recipient}&amp;message={card.message}&amp;sender={card.sender}&amp;year={card.year}" download="cartao-de-natal.pdf" class="download-button">Baixar Cartão em PDF</a>
+    <a href="/christmasPdfCard?recipient={card.recipient}&amp;message={card.message}&amp;sender={card.sender}&amp;year={card.year}&amp;photoUrl={card.photoUrl}" download="cartao-de-natal.pdf" class="download-button">Baixar Cartão em PDF</a>
 </div>
 </body>
 </html>
