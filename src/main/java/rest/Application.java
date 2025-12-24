@@ -23,11 +23,13 @@ public class Application extends Controller {
     public TemplateInstance christmasCard() {
 
         CardData card = new CardData(
-                "Meu amigo secreto é meu Pai!!!",
+                "Meu amigo secreto é meu Pai!",
                 """
-                        O presente vai chegar com um pouquinho de atraso, mas vai chegar...mantendo a 'tradição' do amigo secreto do ano passado vou retribuir com um fotinho do presente...hahahaha
+                        O presente vai chegar com um pouquinho de atraso, mas vai chegar.
+                        E retribuindo meu presente do amigo secreto do ano passado
+                        vou deixar a prévia do presente aqui uma prévia do presente...hahahaha
                         """,
-                "Fernando",
+                "Te Amo Pai! Fernando",
                 "2025"
         );
 
@@ -40,11 +42,13 @@ public class Application extends Controller {
     public TemplateInstance christmasCardHTML() {
 
         CardData card = new CardData(
-                "Meu amigo secreto é meu Pai!!!",
+                "Meu amigo secreto é meu Pai!",
                 """
-                        O presente vai chegar com um pouquinho de atraso, mas vai chegar...mantendo a 'tradição' do amigo secreto do ano passado vou retribuir com um fotinho do presente...hahahaha
+                        O presente vai chegar com um pouquinho de atraso, mas vai chegar.
+                        E retribuindo meu presente do amigo secreto do ano passado
+                        vou deixar a prévia do presente aqui uma prévia do presente...hahahaha
                         """,
-                "Fernando",
+                "Te Amo Pai! Fernando",
                 "2025"
         );
 
